@@ -18,28 +18,30 @@ Input:N = 371
 Output: True
 Explanation: 3^3+7^3+1^3 = 27 + 343 + 1 = 371
 """
+
+def isArmstrong(n):
+        subn=n
+        final=n
+        count=0
+        arm=0
+
+        while n>0:
+            n=n//10
+            count+=1
+
+        while subn>0:
+            su=subn%10
+            arm+=su**count
+            subn=subn//10
+
+        if arm==final:
+            tru="true"
+            return tru
+        else:
+            fal="false"
+            return fal
+
 n=int(input("Enter number : "))
-subn=n
-final=n
-count=0
-arm=0
-
-while n>0:
-    n=n//10
-    count+=1
-
-while subn>0:
-    su=subn%10
-    arm+=su**count
-    subn=subn//10
-
-if arm==final:
-    print("arm ",arm)
-    print("final ",final)
-    print("armstrong number")
-else:
-    print("not armstrong number")
-
-
-
-
+ans=isArmstrong(n)
+print(ans)
+        
