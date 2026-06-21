@@ -190,20 +190,5 @@ print(count)
 price=19.99
 print(int(price)) #float to integer
 """
-balance = 500
-n = int(input("Enter the recharge plan amount:"))
-while True:
-    if n <= balance:
-        remining_balance = balance - n
-        print(f"Recharge successful. Remaining balance: {remining_balance}")
-        break
-    elif n > balance:
-        print("Insufficient balance for recharge. Please enter a smaller amount.")
-        n = int(input("Enter the recharge plan amount:"))
-    elif n != 199 or 399 or 599:
-        print("Invalid recharge plan")
-        n = int(input("Enter the recharge plan amount:"))
-    else:
-        print("Thank you for using our recharge service. Have a nice day!")
-        break
+pow()
     
