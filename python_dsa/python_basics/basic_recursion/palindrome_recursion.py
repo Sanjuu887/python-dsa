@@ -15,15 +15,26 @@ Output: Not Palindrome
 Explanation: String when reversed is not the same as string.
 
 """
-def palindrome(str,left,right):
-    
-    return
+def palindrome(str_array,left,right):
+    if left>=right:
+        return "".join(str_array)
+    str_array[left],str_array[right]=str_array[right],str_array[left]
+    left+=1
+    right-=1
+    return palindrome(str_array,left,right)
 
 
 str=input("enter string : ")
 left=0
 right=len(str)-1
+str_array=[]
 
-palindrome(str,left,right)
+for i in str:
+    str_array.append(i)
+
+if str==palindrome(str_array,left,right):
+    print("palindrome")
+else:
+    print("not palindrome")
 
 
